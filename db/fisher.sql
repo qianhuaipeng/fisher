@@ -35,6 +35,10 @@ INSERT INTO `sys_oauth_client_details` (`client_id`, `resources_ids`, `client_se
 VALUES
 ('cloud',NULL,'$2a$10$X1HOPGX6ADkQn4rvtk.C4uaz8vF1TdpY2aP/iC.3UKlonvco/k9e.','server','password,refresh_token,authorization_code',NULL,NULL,NULL,NULL,NULL,'false');
 
+INSERT INTO `sys_oauth_client_details` (`client_id`, `resources_ids`, `client_secret`, `scope`, `authorized_grant_types`, `web_server_redirect_uri`, `authorities`, `access_token_validity`, `refresh_token_validity`, `addition_information`, `autoapprove`)
+VALUES
+('springcloud',NULL,'springcloud','server','password,refresh_token,authorization_code',NULL,NULL,NULL,NULL,NULL,'false');
+
 # Dump of table sys_resource
 # ------------------------------------------------------------
 
@@ -171,9 +175,9 @@ DROP TABLE IF EXISTS `sys_user`;
 
 CREATE TABLE `sys_user` (
                           `user_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
-                          `username` varchar(255) COLLATE utf8mb4_bin NOT NULL COMMENT '用户名',
+                          `username` varchar(100) COLLATE utf8mb4_bin NOT NULL COMMENT '用户名',
                           `password` varchar(255) COLLATE utf8mb4_bin NOT NULL COMMENT '密码',
-                          `email` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '邮箱',
+                          `email` varchar(100) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '邮箱',
                           `mobile` varchar(32) COLLATE utf8mb4_bin NOT NULL COMMENT '手机号码',
                           `qq` varchar(32) COLLATE utf8mb4_bin DEFAULT NULL COMMENT 'qq号码',
                           `wechat` varchar(32) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '微信号码',

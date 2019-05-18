@@ -84,6 +84,11 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
         clientDetailsService.setSelectClientDetailsSql(SecurityConstants.DEFAULT_FIND_STATEMENT_BY_CLIENT_ID);
         clientDetailsService.setFindClientDetailsSql(SecurityConstants.DEFAULT_FIND_STATEMENT);
         clients.withClientDetails(clientDetailsService);
+//        clients.inMemory() // 使用in-memory存储
+//                .withClient("cloud") // client_id
+//                .secret("$2a$10$X1HOPGX6ADkQn4rvtk.C4uaz8vF1TdpY2aP/iC.3UKlonvco/k9e.") // client_secret
+//                .authorizedGrantTypes("password","refresh_token","authorization_code") // 该client允许的授权类型
+//                .scopes("app"); // 允许的授权范围
     }
 
 

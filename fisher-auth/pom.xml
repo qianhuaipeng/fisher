@@ -11,7 +11,9 @@
 
     <groupId>com.fisher.auth</groupId>
     <artifactId>fisher-auth</artifactId>
-
+    <properties>
+        <skipTests>true</skipTests>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>com.fisher.common</groupId>
